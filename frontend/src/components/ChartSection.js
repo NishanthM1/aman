@@ -4,12 +4,14 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const ChartSection = ({ students, semesters }) => {
+const ChartSection = ({ students }) => {
   const getChartData = () => {
     const semesterGpa = {};
     const semesterCount = {};
+    const uniqueSemesters = new Set();
 
     students.forEach(student => {
+      uniqueSemesters.add(student.semester);
       if (semesterGpa[student.semester]) {
         semesterGpa[student.semester] += student.gpa;
         semesterCount[student.semester] += 1;
@@ -19,11 +21,12 @@ const ChartSection = ({ students, semesters }) => {
       }
     });
 
-    const labels = semesters.map(sem => sem.name);
-    const data = semesters.map(sem => {
-      const semesterId = sem.id;
-      if (semesterGpa[semesterId]) {
-        return (semesterGpa[semesterId] / semesterCount[semesterId]).toFixed(2);
+    const sortedSemesters = Array.from(uniqueSemesters).sort((a, b) => a - b);
+
+    const labels = sortedSemesters.map(sem => `Semester ${sem}`);
+    const data = sortedSemesters.map(semId => {
+      if (semesterGpa[semId]) {
+        return (semesterGpa[semId] / semesterCount[semId]).toFixed(2);
       }
       return 0;
     });
