@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5; /* Light grey background */
+  color: #333;
+}
+
+/* General Card Styling */
+.card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Form Input Styling */
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db; /* Light grey border */
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #374151; /* Dark grey text */
+  background-color: #ffffff;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-input:focus {
+  border-color: #6366f1; /* Indigo focus border */
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25); /* Indigo focus shadow */
+}
+
+/* Button Styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #4f46e5; /* Indigo */
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca; /* Darker indigo */
+}
+
+.btn-success {
+  background-color: #10b981; /* Green */
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #059669; /* Darker green */
+}
+
+.btn-danger {
+  background-color: #ef4444; /* Red */
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626; /* Darker red */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #2c3e50; /* Dark blue/grey from screenshot */
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin-left: 20px;
+}
+
+.nav-link:hover {
+  color: #1abc9c; /* Teal hover effect */
+}
+
+/* Dashboard Overview Cards */
+.dashboard-overview-card {
+  background-color: #e0f2f1; /* Light teal from screenshot */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-overview-card h3 {
+  color: #2c3e50;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.dashboard-overview-card p {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1abc9c; /* Teal from screenshot */
+}
+
+/* Table Styling */
+.table-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow-x: auto; /* For responsive tables */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #eee;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  color: #555;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
